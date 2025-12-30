@@ -229,27 +229,34 @@
 
                 <!-- Form Side -->
                 <div id="contact-form-section" class="w-full lg:w-7/12 bg-slate-800 p-8 md:p-10 rounded-[2rem] self-stretch" data-aos="fade-left" data-aos-delay="400">
-                    <form onsubmit="event.preventDefault(); this.innerHTML='<div class=\'text-orange-500 font-bold display-font text-center py-20 text-2xl animate-pulse\'>MESSAGE SENT. WE WILL CONTACT YOU SOON.</div>';" class="flex flex-col h-full space-y-6">
+                    <form action="https://formsubmit.co/cuflooringtiles@gmail.com" method="POST" class="flex flex-col h-full space-y-6">
+                        <input type="hidden" name="_subject" value="Website Inquiry - C. U. Flooring Tiles">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_next" value="/thank-you.html">
+
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-2 block">Full Name</label>
-                                <input type="text" placeholder="John Doe" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg text-white p-3 outline-none focus:border-orange-500 placeholder-slate-600 text-sm" required>
+                                <input name="name" type="text" placeholder="John Doe" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg text-white p-3 outline-none focus:border-orange-500 placeholder-slate-600 text-sm" required>
                             </div>
                             <div>
                                 <label class="text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-2 block">WhatsApp / Phone</label>
-                                <input type="tel" placeholder="+91 00000 00000" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg text-white p-3 outline-none focus:border-orange-500 placeholder-slate-600 text-sm" required>
+                                <input name="phone" type="tel" placeholder="+91 00000 00000" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg text-white p-3 outline-none focus:border-orange-500 placeholder-slate-600 text-sm" required>
                             </div>
                         </div>
 
                         <div class="flex-grow">
                             <label class="text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-2 block">Project Details</label>
-                            <textarea placeholder="Describe your requirements (Quantity, Location, Type)..." class="w-full bg-slate-900/50 border border-slate-700 rounded-lg p-3 text-white text-sm h-32 md:h-40 outline-none focus:border-orange-500 resize-none"></textarea>
+                            <textarea name="message" placeholder="Describe your requirements (Quantity, Location, Type)..." class="w-full bg-slate-900/50 border border-slate-700 rounded-lg p-3 text-white text-sm h-32 md:h-40 outline-none focus:border-orange-500 resize-none"></textarea>
                         </div>
 
                         <button type="submit" class="w-full bg-orange-600 py-4 font-bold text-white rounded-xl hover:bg-orange-700 transition-all uppercase tracking-widest text-[11px] shadow-lg flex items-center justify-center gap-2">
                             <span>Request Catalog & Quote</span>
                             <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </button>
+
+                        <p class="text-slate-400 text-xs mt-2">By submitting you agree to be contacted regarding your inquiry. We respect your privacy.</p>
                     </form>
                 </div>
             </div>
